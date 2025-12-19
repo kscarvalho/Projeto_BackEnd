@@ -24,6 +24,7 @@ if (!fs.existsSync(USERS_FILE)) {
 
 // 📌 CADASTRO
 app.post('/register', (req, res) => {
+  console.log(req.body);
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
